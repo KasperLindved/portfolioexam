@@ -1,0 +1,1004 @@
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    background-color: #89A8B9;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 11pt;
+    color: #555;
+}
+a {
+    text-decoration: none;
+    margin-top: 1em;
+}
+a:link, a:active, a:visited {
+    font-weight: bold;
+    color: black;
+}
+ul {
+    list-style: none;
+}
+main {
+    margin: auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.9em 178px 43em 7em;
+    grid-row-gap: 1em;
+}
+div#searchArea {
+    text-align: right;
+    margin-right: 0;
+    margin-top: 1.3em;
+    color: white;
+    font-weight: bold;
+}
+div#searchArea span {
+    vertical-align: middle;
+}
+div#searchArea input {
+    height: 1.5em;
+    width: 70px;
+    margin-left: 10px;
+    border: none;
+}
+div#searchArea2 {
+    display: none;
+}
+div.banner {
+    background-image: url("images/banner.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center center;
+    min-height: 178px;
+}
+div.banner a div {
+    width: 100vw;
+    height: 13em;
+    cursor: crosshair;
+}
+div.centerPart {
+    position: relative;
+    background-color: #89A8B9;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5em 35em;
+}
+nav.baseLevel {
+    grid-column: 1/-1;
+    height: 3em;
+    background-color: #D5D5D5;
+}
+nav.baseLevel ul {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+nav.baseLevel ul li {
+    color: black;
+    text-align: center;
+}
+nav.baseLevel ul li a {
+    color: black;
+}
+nav.baseLevel ul li.selected a {
+    color: white;
+}
+main#policies nav.baseLevel ul li:first-of-type a {
+    color: black;
+}
+div.underBaseLevel {
+    position: relative;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+aside.subLevelForMobile {
+    display: none;
+}
+nav.subLevel {
+    height: 30em;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: 1em 1em 1em 2em;
+    font-family: 'Times', serif;
+    background-color: #8B936F;
+    margin-left: 2em;
+    margin-right: 2em;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-rows: 1fr 4fr 5fr 4fr 4fr;
+}
+nav.subLevel > p {
+    margin-bottom: .5em;
+}
+nav.subLevel ul {
+    color: #ddd;
+    font-size: .9em;
+    margin-bottom: .7em;
+}
+nav.subLevel ul {
+    font-size: .7em;
+    padding-top: .8em;
+    width: 95%;
+    border-top: .5px solid white;
+}
+nav.subLevel ul ul {
+    border-top: none;
+    padding-left: 0;
+}
+nav.subLevel ul li {
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: 0 1em .7em 0;
+}
+nav.subLevel ul  ul li {
+    margin-left: 1em;
+}
+nav.subLevel ul li a {
+    color: white;
+}
+li#byColor + li ul, li#byColor1 + li ul {
+    display: grid;
+    grid-template-columns: 1em 1em 1em;
+    grid-column-gap: 1em;
+}
+/*
+li#byColor p {
+    grid-column: 1/-1;
+}
+li#byColor li {
+    width: 1em;
+    display: inline;
+    margin-top: 0;
+}
+*/
+nav.subLevel div.colorSquare {
+    width: 1em;
+    height: 1em;
+}
+div#whiteSquare {
+    background-color: white;
+}
+div#blackSquare {
+    background-color: black;
+}
+div#silverSquare {
+    background-color: silver;
+}
+section.subLevel {
+    cursor: ns-resize;
+    position: relative;
+    left: 3em; /* move this section to the right a bit, grid setting not idea */
+    height: 35em;
+    overflow: scroll;
+    grid-column: 5/11;
+    display: grid;
+    grid-auto-columns: 1fr;
+}
+/* for single product page */
+a#backButton {
+    position: absolute;
+    left: -5em;
+    top: 0;
+}
+section.subLevelOnOneProductPage {
+    position: relative;
+    left: 3em;
+    height: 35em;
+    overflow: visible;
+    grid-column: 5/11;
+    display: grid;
+    grid-template-rows: auto 1em auto;
+}
+section.subLevelOnOneProductPage div.oneProduct {
+    margin-top: 2em;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 24vw 17vw;
+    grid-template-rows: 24vw 3em 3em;
+    grid-column-gap: 3em;
+    grid-row-gap: .5em;
+}
+div.productImg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 23vw;
+    height: 23vw;
+    background-image: url("images/fences/white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div.productInfo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+div.productPrice {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 2em;
+    border-bottom: 1px solid black;
+}
+div.productCus {
+    grid-column: 1/2;
+    grid-row: 3/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+div.productCus input {
+    width:40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dotted white;
+}
+div.productCus span {
+    color: white;
+}
+button.submitOrder {
+    border: none;
+    background-color: #8B936F;
+    grid-column: 2/3;
+    grid-row: 3/-1;
+    color: white;
+    font-size: 1.2em;
+}
+section.subLevel article, section.subLevelOnOneProductPage article {
+    border-bottom: 3px solid #8B936F;
+    padding: 2em;
+    padding-left:2em;
+    width: auto;
+    margin: 0 auto;
+    height: 5em;
+}
+section.subLevel article h5, section.subLevelOnOneProductPage article h5 {
+    font-size: 1.7em;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+div.imgArea {
+    background-color: #89A8B9;
+    margin-top: 0;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 23vw 23vw;
+    grid-template-rows: 23vw;
+    grid-gap: 4vw;
+}
+div.singleImg {
+    background-color: #aaa;
+    height: 23vw;
+}
+div#img1 {
+    background-image: url("images/fences/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div#img2 {
+    background-image: url("images/fences/2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div#img3 {
+    background-image: url("images/fences/3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div#img4 {
+    background-image: url("images/fences/4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div#img5, div#img55 {
+    background-image: url("images/fences/white-with-text.png");
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div#img6 {
+    background-image: url("images/fences/6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer {
+    font-size: .8em;
+    padding-top: 1em;
+    grid-row: 4/-1;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #89A8B9;
+    border-top: 3px solid #8B936F;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+footer p, footer section {
+    margin-top: .5em;
+    color: #555;
+}
+div#links {
+    text-align: right;
+}
+div#links a {
+    color: white;
+}
+li.priceLi {
+    color: white;
+}
+
+/* for gates.html railings.html accessories.html */
+main#gates div.singleImg, main#railings div.singleImg, main#accessories div.singleImg {
+    background-image: url("images/placeholder-500x500.jpg");
+}
+
+/* for policies page */
+article#policies {
+    margin-top: 1em;
+    grid-column: 3/-3;
+    font-size: .9em;
+}
+article#policies section {
+    margin-top: 1em;
+}
+article#policies p {
+    margin-top: 7em;
+}
+article#policies section > p {
+    margin-top: 1em;
+}
+
+/* for frontpage */
+div.subtitle {
+    text-align: center;
+    color: white;
+}
+div.content > div {
+    text-align: center;
+}
+div.main_text {
+    color: white;
+    width: 67vw;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+}
+
+.header {
+    grid-column: col / span 12;
+    grid-row: row 2;
+    background-image: url("images/banner.png");
+    background-repeat: repeat-x;
+    background-position: center center;
+    min-height: 178px;
+}
+
+.search {
+    display: inline;
+    grid-column: col / span 12;
+    grid-row: row;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+}
+.search input {
+    width: 70px;
+    margin-left: 10px;
+}
+.content {
+    grid-column: col / span 12;
+    grid-row: row 3;
+}
+
+.product-list {
+    text-align: center;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: repeat(4, 22vw);
+    margin-left: 4vw;
+}
+
+div.product-list a {
+    width: 22vw;
+    margin-right: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    font-size: .9em;
+    grid-column: col / span 12;
+    grid-row: row 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1em 6em 1em 6em;
+    border-top: 3px solid #8B936F;
+}
+
+
+.left {
+    padding-top: 1em;
+    text-align: left;
+    color: black;
+}
+
+.center {
+    padding-top: 1em;
+    text-align: center;
+    color: black;
+}
+
+.right {
+    padding-top: 1em;
+    text-align: right;
+}
+
+.main_text {
+    text-align: center;
+    max-width: 600px;
+    margin: 2em auto;
+    font-size: 15pt;
+}
+
+.title {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: white;
+    font-weight: 10pt;
+    font-size: 20pt;
+    margin-bottom: 4em;
+}
+
+.title h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 20pt;
+    margin: 0.5em;
+}
+
+.title h2 {
+    font-size: 18pt;
+    margin: 0.5em;
+}
+
+.title h3 {
+    font-size: 18pt;
+    margin: 0.5em;
+    margin-bottom: 1em;
+}
+
+.subtitle {
+    font-size: 14pt;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+a:link,
+a:active,
+a:visited {
+    color: white;
+}
+
+.links ul {
+    list-style-type: none;
+}
+
+hr {
+    max-width: 10em;
+    margin: 0 auto;
+    border-bottom: 2px solid #8B936F;
+}
+
+.button {
+    border: none;
+    color: white;
+    font-size: 12pt;
+    background-color: #8B936F;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* mobile for frontpage */
+@media (max-width: 36em) {
+    .header {
+        background-image: url("images/banner-small.png");
+        min-height: 178px;
+    }
+    div.search {
+        display: none;
+        background-image: url(images/search.png);
+    }
+    body#fp div#searchArea2 {
+        top: .8em;
+        }
+
+    .product-list {
+        text-align: center;
+        display: grid;
+        grid-gap: .3vw;
+        grid-template-columns: 80vw;
+        margin-left: 10vw;
+    }
+
+    div.product-list a {
+        width: 80vw;
+        margin-right: 0;
+        display: inline-block;
+        text-align: center;
+    }
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .left {
+        text-align: left;
+        font-size: .8em;
+        width: 20vw;
+    }
+    .center {
+        text-align: left;
+        font-size: .8em;
+        margin-top: -1.1em;
+        margin-left: 1em;
+    }
+    .right {
+        text-align: right;
+    }
+}
+
+
+/* for individual page, ipad-verticle, 832 */
+@media all and (max-width: 52em) {
+    main {
+        margin: auto 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2em 10em 47em 6em;
+        grid-row-gap: 1em;
+    }
+    div#searchArea {
+        margin-top: 1.5em;
+    }
+    div#searchArea2 {
+        display: none;
+    }
+
+    div.banner a div {
+        width: 100vw;
+        height: 11em;
+    }
+    div.centerPart {
+        grid-template-columns: 1fr;
+        grid-template-rows: 4em 42em;
+    }
+    div.underBaseLevel {
+        position: relative;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    nav.subLevel {
+        height: 517px;
+        color: white;
+        font-size: 1.2em;
+        font-weight: 100;
+        padding: 1em 1em 2em 2em;
+        font-family: 'Times', serif;
+        background-color: #8B936F;
+        margin-left: 1em;
+        margin-right: 0;
+        grid-column: 1/4;
+        display: grid;
+        grid-template-rows: 1fr 4fr 5fr 4fr 4fr;
+    }
+    nav.subLevel > p {
+        margin-bottom: 1em;
+    }
+    section.subLevel {
+        height: 600px;
+        cursor: ns-resize;
+        position: relative;
+        grid-column: 5/11;
+        display: grid;
+        grid-auto-columns: 1fr;
+    }
+    section.subLevel article {
+        border-bottom: 3px solid #8B936F;
+        padding-top: 3em;
+        width: auto;
+        margin: 0 auto;
+        height: 6em;
+    }
+    section.subLevel article:first-of-type {
+        padding-top: 1em;
+        height: 4em;
+    }
+    section.subLevel article h5 {
+        font-size: 1.7em;
+        font-weight: 100;
+        color: white;
+        text-align: center;
+    }
+    div.imgArea:last-of-type {
+        height: 40em;
+    }
+    section.subLevelOnOneProductPage {
+    position: relative;
+    left: 3em;
+    height: 35em;
+    overflow: visible;
+    grid-column: 5/11;
+    display: grid;
+    grid-template-rows: auto 1em auto;
+    }
+    section.subLevelOnOneProductPage div.oneProduct {
+        display: grid;
+        grid-template-columns: 29vw 20vw;
+        grid-template-rows: 33vw 4em 4em;
+        grid-column-gap: 1em;
+        grid-row-gap: .5em;
+    }
+    div.productInfo {
+    }
+    div.productImg {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 28vw;
+        height: 28vw;
+        background-color: white;
+    }
+    div.productCus {
+        grid-column: 1/2;
+        grid-row: 3/-1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-row-gap: .5em;
+    }
+    div.productCus span:first-of-type {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    div.productCus input:first-of-type {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    div.productCus span:nth-of-type(2) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    div.productCus input:nth-of-type(2) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    div.productCus span:nth-of-type(3) {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    div.productCus input:nth-of-type(3) {
+        grid-column: 4/-1;
+        grid-row: 1/2;
+    }
+    div.productCus span:nth-of-type(4) {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    div.productCus input:nth-of-type(4) {
+        grid-column: 4/-1;
+        grid-row: 2/3;
+    }
+
+}
+
+/* for individual page, mobile 576*/
+@media all and (max-width: 36em) {
+    main {
+        margin: auto 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2em 12em 38em 6em;
+        grid-row-gap: 0;
+    }
+    div#searchArea {
+        display: none;
+    }
+    div#searchArea2 {
+        display: inline;
+        width: 1.5em;
+        height: 1.5em;
+        position: fixed;
+        top: .3em;
+        right: 1em;
+        background-image: url("images/search.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 3;
+    /*    text-align: right;
+        margin-right: .5em;
+        margin-top: .5em;
+        color: white;
+        font-weight: bold; */
+    }
+    div#searchArea input {
+        display: none;
+    }
+    div.banner {
+        background-image: url("images/banner-small.png");
+        background-size: contain;
+        grid-row: 1/3;
+    }
+    div.banner a div {
+        width: 100vw;
+        height: 12em;
+    }
+    div.centerPart {
+        position: relative;
+        background-color: #89A8B9;
+        grid-row: 3/4;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3em auto;
+    }
+/* need this navi? can use this area for filter area */
+    nav.baseLevel {
+    grid-column: 1/-1;
+    height: 3em;
+    background-color: #D5D5D5;
+    }
+    div.underBaseLevel {
+        position: relative;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: 2fr 7fr 2fr;
+    }
+    nav.subLevel {
+        display: none;
+    }
+    aside.subLevelForMobile {
+        display: inline;
+    }
+    input#menuForMobile {
+        display: none;
+    }
+    input#menuForMobile ~ nav {
+        max-height: 0;
+        overflow: hidden;
+    }
+    input#menuForMobile:checked ~ nav {
+        max-height: 450px;
+        overflow: scroll;
+        background-color: #8B936F;
+        width: 90vw;
+        text-align: left;
+        padding: 2em 5em;
+        font-family: 'Times', serif;
+        position: absolute;
+        left: .5em;
+        z-index: 3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr 5fr 4fr 4fr;
+    }
+    aside.subLevelForMobile label {
+        display: inline;
+        color: white;
+        padding-left: 0;
+        margin-bottom: 1em;
+    }
+    input#menuForMobile:checked ~ nav ul p {
+        color: #ddd;
+        font-size: 1.1em;
+        margin-bottom: .5em;
+    }
+    input#menuForMobile:checked ~ nav ul {
+        font-size: 1em;
+        padding-top: .3em;
+        width: 95%;
+        border-top: .5px solid white;
+    }
+    input#menuForMobile:checked ~ nav ul:first-of-type {
+        border-top: none;
+        margin-left: 1em;
+    }
+    input#menuForMobile:checked ~ nav ul li {
+        font-size: 1.2em;
+        font-weight: 100;
+        margin-bottom: .4em;
+    }
+    input#menuForMobile:checked ~ nav ul li a {
+        color: white;
+    }
+    ul#byColor1 {
+        display: grid;
+        grid-template-columns: 1em 1em 1em;
+        grid-column-gap: 1em;
+    }
+    input#menuForMobile:checked ~ nav ul#byColor1 p {
+        grid-column: 1/-1;
+    }
+    input#menuForMobile:checked ~ nav ul#byColor1 li {
+        width: 1em;
+        display: inline;
+        margin-top: 0;
+    }
+    input#menuForMobile:checked ~ nav ul li a div#whiteSquare1 {
+        background-color: white;
+        width: 1em;
+        height: 1em;
+    }
+    input#menuForMobile:checked ~ nav ul li a div#blackSquare1 {
+        background-color: black;
+        width: 1em;
+        height: 1em;
+    }
+    input#menuForMobile:checked ~ nav ul li a div#silverSquare1 {
+        background-color: silver;
+        width: 1em;
+        height: 1em;
+    }
+    input#menuForMobile:checked ~ nav li.priceLi {
+        color: white;
+        margin-left: 1em;
+    }
+    section.subLevel {
+        height: 500px;
+        margin-left: -.5em;
+        grid-column: 2/3;
+        cursor: ns-resize;
+        position: relative;
+        overflow: scroll;
+        display: grid;
+        grid-auto-columns: 1fr;
+    }
+    section.subLevel article {
+        border-bottom: 3px solid #8B936F;
+        padding-top: 2em;
+        width: auto;
+        margin: 0 auto;
+        height: 5em;
+    }
+    article#wroughtIron {
+        height: 7em;
+    }
+    section.subLevel article h5 {
+        font-size: 1.4em;
+        font-weight: 100;
+        color: white;
+        text-align: center;
+    }
+    div.imgArea {
+        background-color: #89A8B9;
+        margin-top: .5em;
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: 60vw;
+        grid-template-rows: 60vw;
+        grid-gap: 4vw;
+    }
+    div.imgArea:first-of-type {
+        margin-top: 0;
+    }
+    div.imgArea a {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    div.singleImg {
+        background-color: white;
+        height: 60vw;
+        width: 60vw;
+    }
+
+    section.subLevelOnOneProductPage {
+        position: relative;
+        top: -3.5em;
+        left: 4em;
+        width: 70vw;
+        margin: 0 auto;
+        height: 35em;
+        overflow: scroll;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-rows: 1em 5em 2em auto;
+    }
+    a#backButton {
+    position: absolute;
+    left: 0;
+    top: .5em;
+}
+
+    section.subLevelOnOneProductPage article h5 {
+        font-size: 1.4em;
+    }
+    section.subLevelOnOneProductPage div.oneProduct {
+        margin-top: 2em;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70vw auto auto 5em 5em;
+        grid-row-gap: 1em;
+    }
+    div.productImg {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        width: 70vw;
+        height: 70vw;
+        background-color: white;
+    }
+    div.productInfo {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+    div.productPrice {
+        grid-column: 1/-1;
+        grid-row: 4/5;
+        font-size: 2em;
+        border-bottom: 1px solid black;
+    }
+    div.productCus {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+    button.submitOrder {
+        border: none;
+        background-color: #8B936F;
+        grid-column: -1/1;
+        grid-row: 5/-1;
+        color: white;
+        font-size: 1.2em;
+    }
+    /* for policies page */
+    article#policies {
+        font-size: .8em;
+    }
+    article#policies section {
+        margin-top: .5em;
+    }
+    article#policies p {
+        margin-top: .5em;
+    }
+    article#policies section > p {
+        margin-top: .3em;
+    }
+    footer {
+        font-size: .75em;
+        padding-top: 1em;
+        grid-row: 4/-1;
+        width: 100%;
+        padding: 0 1em;
+        margin: 0 auto;
+        background-color: #89A8B9;
+        border-top: 3px solid #8B936F;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+    }
+    footer p, footer section {
+        margin-top: .5em;
+    }
+    div#links {
+        color: white;
+        text-align: right;
+    }
+}

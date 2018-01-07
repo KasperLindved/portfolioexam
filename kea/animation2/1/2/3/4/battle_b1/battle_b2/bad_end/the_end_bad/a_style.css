@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market|Shojumaru');
+body{
+    width: 1024px;
+    height: 768px;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+    position: relative;
+    background-image:url(1.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: soft-light;
+}
+.boton {
+    font-family: 'Chelsea Market', cursive;
+    width: 180px;
+    height: 50px;
+    border-radius: 102px;
+    position: absolute;
+    font-size: 1.5em;
+    background-color: red;
+    top: 615px;
+    left: 425px;
+}
+
+h1{
+    font-family: 'Shojumaru', cursive;
+    margin: 0px;
+    font-size: 6.4em;
+    position: absolute;
+    top: 165px;
+    left: 13%;
+    color: white;
+    animation-name: won;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes won {
+    0% {
+        color: white;
+    }
+    50%{
+        color: red;
+    }
+100% {
+        color: white;
+    }
+}
+p{
+    margin: 0px;
+    height: 50px;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 2em;
+    position: absolute;
+    top: 685px;
+    left: 24%;
+    color: white;
+    text-align: center;
+}
+div video{
+    width: 1024px;
+    opacity: 1;
+}
+.theme{
+    display: none;
+}

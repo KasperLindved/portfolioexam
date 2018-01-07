@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>leccion_6</title>
+    <style>
+        body{
+        color:black
+        animation: bg 2s linear infinite;
+        background-repeat: repeat-x;
+        }
+
+
+        .man{
+            width: 120px;
+            height: 160px;
+            background-image: url(walk_sprite.png);
+            animation: walk 1s infinite steps(8);
+            margin-top: 90px;
+            }
+
+
+        @keyframes bg {
+            to {
+                background-position: -400px 9px;
+            }
+        }
+
+        @keyframes walk{
+            to{
+                background-position: -960px 0px;
+            }
+
+    </style>
+
+</head>
+
+<body>
+<div class="wrap">
+<div class="man"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market|Shojumaru');
+body {
+    width: 1204px;
+    height: 768px;
+}
+
+main {
+    width: 1024px;
+    height: 768px;
+    background-color: gainsboro;
+    position: relative;
+    background-image: url(scn2_background.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    animation-name: fade_in_all;
+    animation-duration: 1.9s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fade_in_all {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+.rick{
+    position: absolute;
+    left: 130px;
+    top: 200px;
+    opacity: 0
+}
+.animacion_rick{
+    animation-name: animacion_rick;
+    animation-duration: 0.8s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes animacion_rick {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0
+    }
+}
+.instrucctions{
+    font-family: 'Chelsea Market', cursive;
+    width: 320px;
+    height: 65px;
+    padding-top:;
+    border-radius: 102px;
+    position: absolute;
+    font-size: 1.5em;
+    background-color: red;
+    left: 230px;
+    top: 650px;
+    text-align: center;
+    animation-name: instrucciones;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    color: white;
+
+}
+
+@keyframes instrucciones {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.div_contenedor {
+    opacity: 0;
+    animation-name: fade_in2;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade_in2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+.republicans {
+    opacity: 0;
+    position: absolute;
+    animation-name: republicans;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes republicans {
+    0% {
+        opacity: 0;
+        left: 240px;
+        top: 470px;
+    }
+    100% {
+        opacity: 1;
+        left: 69px;
+        top: 450px;
+    }
+}
+.boton_next {
+    font-family: 'Chelsea Market', cursive;
+    width: 180px;
+    height: 50px;
+    border-radius: 102px;
+    position: absolute;
+    font-size: 1.5em;
+    background-color: red;
+    top: 390px;
+    left: 580px;
+}
+
+div h1 {
+    margin: 0;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 3em;
+    position: absolute;
+    top: 190px;
+    left: 580px;
+}
+
+.heroe {
+    opacity: 0;
+    position: absolute;
+    animation-name: fade_in;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+        left: 240px;
+        top: 470px;
+    }
+    100% {
+        opacity: 1;
+        left: 340px;
+        top: 320px;
+    }
+
+.republicans {
+    opacity: 0;
+    position: absolute;
+    animation-name: republicans;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes republicans {
+    0% {
+        opacity: 0;
+        left: 240px;
+        top: 470px;
+    }
+    100% {
+        opacity: 1;
+        left: 340px;
+        top: 32px;
+    }
+}

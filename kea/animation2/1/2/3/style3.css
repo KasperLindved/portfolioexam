@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market|Shojumaru');
+body {
+    width: 1204px;
+    height: 768px;
+}
+
+main {
+    width: 1024px;
+    height: 768px;
+    background-color: gainsboro;
+    position: relative;
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: auto;
+    animation-name: fade_in_all;
+    animation-duration: 1.9s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fade_in_all {
+    from {opacity: 0;}
+    to {opacity: 1}
+    }
+.div_contenedor{
+    opacity: 0;
+    animation-name: fade_in2;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade_in2 {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.boton_next{
+    font-family: 'Chelsea Market', cursive;
+    width:180px;
+    height: 50px;
+    border-radius: 102px;
+    position: absolute;
+    font-size: 1.5em;
+    background-color: black;
+    top: 390px;
+    left: 580px;
+    color: white;
+    animation-name: boton_loop;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes boton_loop {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+    }
+
+div h1 {
+    margin: 0;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 3em;
+    position: absolute;
+    top: 190px;
+    left: 580px;
+}
+
+div img {
+    width:60%;
+    opacity: 0;
+    position: absolute;
+    animation-name: fade_in;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+        left: -570px;
+        top: 307px;
+    }
+    65%{
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+        left: -28px;
+        top: 307px;
+    }
+

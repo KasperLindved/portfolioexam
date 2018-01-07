@@ -1,0 +1,64 @@
+
+#box{
+    display:block;
+    width: 17000px;
+    height:800px;
+    background-image: url(Background/Background.png);
+    animation: movement linear 12s forwards;
+}
+
+    @keyframes movement{
+        to{
+            background-position: -5100px;
+        }
+}
+
+button{
+    display:inline-block;
+    background-color:red;
+    margin:auto;
+    width: 250px;
+    height: 250px;
+    font-family: 'Old Standard TT';
+    font-size:50px;
+    border: solid white 3px;
+}
+
+#tyrone{
+    left: -500px;
+    width:335px;
+    height: 445px;
+    display: block;
+    background-image:url(mcss_large.png);
+    animation: skate 1s steps(6) infinite;
+    position:relative;
+    top:350px;
+    }
+
+@keyframes skate{
+    to{
+        background-position: -2000px;
+        transform: translatex(800px)
+    }
+}
+        #action{
+            animation: TyroneEnters linear 2s forwards;
+        }
+
+    @keyframes TyroneEnters{
+        to {
+            transform: translatex(800px)
+        }
+    }
+
+
+.jump {
+    animation: jump 2s ease-out forwards;
+}
+@keyframes jump {
+    50%{
+        transform:translatey(-50px);
+    }
+}
+
+

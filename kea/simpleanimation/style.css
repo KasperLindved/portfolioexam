@@ -1,0 +1,157 @@
+    body {
+        background-image:url(cromulon.png);
+        text-align: center;
+    }
+
+h1 {
+    font-family:monospace;
+    color: green;
+    font-size: 60px;
+}
+
+button {
+    display:block;
+    width: 100px;
+    margin:auto;
+    padding: 1em;
+    border:solid green
+
+}
+    div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .shakeCSS {
+        animation: shakeItBaby 0.1s infinite;
+    }
+
+    @keyframes shakeItBaby {
+        25% {
+            transform: translateX(-10px);
+        }
+        75% {
+            transform: translateY(10px);
+        }
+    }
+
+    .rotateCSS {
+        animation: rotatebaby 3s forwards;
+    }
+
+    @keyframes rotatebaby {
+    to {
+        transform: rotateY(180deg);
+        }
+    }
+
+    .viagraCSS {
+        width: 200vh;
+        height: 50vh;
+        transition: all 10s;
+    }
+
+    .moveCSS {
+        animation: Moveit 5s forwards;
+    }
+
+    @keyframes Moveit {
+        25% {
+            transform: translateX(800px);
+        }
+        75% {
+            transform: translateX(-800px)
+        }
+    }
+
+    .jumpCSS {
+        animation: jumpit 2s ease-in;
+    }
+
+    @keyframes jumpit {
+        25% {
+            transform: translateY(-2000px);
+        }
+    }
+
+    .aroundCSS {
+        animation: around 5s ease-in;
+    }
+
+    @keyframes around {
+        25% {
+            transform: translateY(-500px) translateX(500px);
+        }
+        50% {
+            transform: translateY(0px) translateX(0px);
+        }
+        75% {
+            transform: translateY(-500px) translateX(-500px);
+        }
+    }
+
+    .dieCSS {
+        animation: diebaby 4s ease-in forwards;
+    }
+
+    @keyframes diebaby {
+        to {
+            transform: rotateX(90deg);
+            transform-origin: bottom;
+        }
+    }
+
+    .riseCSS {
+        animation: rise 4s forwards;
+        opacity: 0%;
+    }
+
+    @keyframes rise {
+        to {
+            opacity: 100%;
+        }
+    }
+
+    .fadeCSS {
+        animation: fade 2s linear infinite;
+    }
+
+    @keyframes fade {
+        0%,
+        100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+
+    .moveto30CSS {
+    animation: moveto30 3s ease;
+}
+
+    @keyframes moveto30 {
+    10% {
+        transform: translateX(-260px);
+
+        }
+    }
+
+    100% {
+        transform: translateX( 30%);
+    }
+
+
+    .movefrom30CSS {
+    animation: movefrom30 3s ease;
+}
+
+    @keyframes movefrom30 {
+    0% {
+        transform: translateX(70%);
+        }
+    }
+    100% {
+        transform: translateX(0%);
+    }
+

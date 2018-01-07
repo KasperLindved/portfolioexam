@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market|Shojumaru');
+body {
+    width: 1204px;
+    height: 768px;
+}
+
+main {
+    width: 1024px;
+    height: 768px;
+    position: relative;
+    background-image: url(scn4_background.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-blend-mode: soft-light;
+    animation-name: fade_in_all;
+    animation-duration: 1.9s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.fighter_derecha{
+    width: 620px;
+    height: 794px;
+    display: block;
+    background-image: url(dodge.png);
+    animation: attack_derecha 1s steps(2) infinite;
+    position: absolute;
+    top: -110px;
+    left: 450px;
+}
+@keyframes attack_derecha{
+   to{
+        background-position: -8900px;
+        }
+    }
+@keyframes fade_in_all {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.fighter_izquierda {
+    width: 80%;
+    height: 794px;
+    display: block;
+    background-image: url(yojimbo.png);
+    animation: attack 1s steps(10) infinite;
+    position: relative;
+    top: -30px;
+    left: -200px;
+}
+@keyframes attack{
+   to{
+        background-position: -8800px;
+        }
+    }
+h1 {
+    margin: 0px;
+    font-family: 'Shojumaru', cursive;
+    font-size: 14em;
+    text-align: center;
+    position: absolute;
+    left: 70px;
+    top: 190px;
+    opacity: 0;
+    animation-name: fight_in;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    color: red;
+
+}
+
+@keyframes fight_in {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.boton {
+    font-family: 'Chelsea Market', cursive;
+    width: 180px;
+    height: 50px;
+    border-radius: 102px;
+    position: absolute;
+    font-size: 1.5em;
+    background-color: red;
+}
+.a1{
+    top: 100px;
+    left: 190px;
+}
+.b1{
+    top: 100px;
+    left: 610px;
+}
+.instrucctions{
+    font-family: 'Chelsea Market', cursive;
+    width: 510px;
+    height: 130px;
+    border-radius: 102px;
+    position: absolute;
+    font-size: 2.5em;
+    background-color: red;
+    left: 230px;
+    top: 470px;
+    text-align: center;
+    animation-name: instrucciones;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    color: white;
+
+}
+
+@keyframes instrucciones {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.sun {
+    position: absolute;
+    width: 60%;
+    left: 170px;
+    top: 0px;
+    opacity: 0;
+    animation-name: sun_in;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    color: red;
+
+}
+
+@keyframes sun_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+
+.fighter_derecha{
+    width: 80%;
+    height: 794px;
+    display: block;
+    background-image: url(dodge.png);
+    animation: attack_derecha 1s steps(10) infinite;
+    position: relative;
+    top: -30px;
+    left: -200px;
+}
+@keyframes attack_derecha{
+   to{
+        background-position: -8800px;
+        }
+    }

@@ -1,0 +1,196 @@
+body{
+    color: white;
+    background-color:#171616;
+}
+
+nav ul{
+    display:inline-block;
+
+}
+nav ul li{
+    display:inline-block;
+    width: 500px;
+    text-align:center;
+    height:80px;
+    margin:4px 2px 0px 0px;
+    border:3px white solid;
+
+}
+
+  #aboutimage{
+        width:50%;
+        height:auto;
+}
+nav ul li:active{
+    color:white;
+        transition:2
+
+}
+
+
+main img{
+    display:block;
+    background-image: url(../images/raw/Lindved.png);
+    margin:auto;
+}
+
+nav a{
+    display:block;
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size:225%;
+    padding:2px;
+    padding-top:4%;
+    font-family: 'Old Standard TT';
+}
+
+nav ul li:hover{
+    color:black;
+    background-color:bisque;
+    transition:slide, 2
+}
+
+nav a:hover{
+    color:black;
+}
+
+header img{
+    display: block;
+    margin:auto;
+}
+article img{
+    display:block;
+    margin:auto;
+    padding:2em;
+}
+li.selected a{
+    font-weight: 600;
+    color: aqua !important;
+}
+
+.pdf{
+    margin:auto;
+    display:block;
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size:200%;
+    font-family: 'Old Standard TT';
+    text-align:center;
+    width: 500px;
+    height:140px;
+    border:3px white solid;
+    padding:1em
+    }
+
+h1{
+    font-family: 'Old Standard TT';
+    font-size:400%;
+    text-decoration: none;
+    text-align:center;
+}
+
+h2{
+    font-family: 'Old Standard TT';
+    font-size:200%;
+    margin-left:5%;
+}
+
+h3{
+    color:darkorange;
+    font-family: 'Old Standard TT';
+    font-size:300%;
+    margin-left:5%;
+}
+h4, h5, h6, p{
+    font-size:140%;
+    margin-left:5%;
+}
+
+/*TABLET*/
+
+@media only screen and (min-width: 50em) {
+    nav ul{
+    display:grid;
+    grid-template-columns:460px 460px;
+    padding:10px;
+    }
+    nav ul li{
+    display:inline-block;
+    width: 450px;    width: 450px;
+
+    text-align:center;
+    height:80px;
+    margin:4px 2px 0px 0px;
+    border:3px white solid;
+    }
+    article{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .box1{
+        grid-column: 1/-1;
+    }
+    .box2{
+        grid-column: 1/-1;
+        grid-row:;
+    }
+    .box3{
+        grid-column: 1/-1;
+        grid-row:1;
+    }
+    .box4{
+        grid-column: 1/-1;
+        }
+
+    }
+/*DESKTOP*/
+
+@media only screen and (min-width: 100em) {
+
+    nav ul{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:10px;
+    }
+    nav ul li{
+    display:inline-block;
+    width:400px;
+    text-align:center;
+    height:80px;
+    border:3px white solid;
+    }
+    nav a{
+    display:block;
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size:200%;
+    padding:2px;
+    padding-top:4%;
+    font-family: 'Old Standard TT';
+    }
+    main img{
+    background-image: url(../images/raw/Lindved.png);
+    }
+       article{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .box1{
+        grid-column: 1/2;
+    }
+    .box2{
+        grid-column: 2/-1;
+    }
+    .box3{
+        grid-column: 1/2;
+    }
+    .box4{
+        grid-column: 1/-1;
+        }
+
+    }
